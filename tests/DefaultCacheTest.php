@@ -9,7 +9,7 @@ class DefaultCacheTest extends TestCase
 {
     public function testHasValue()
     {
-        $cache = new DefaultCache($maxsize = 4, $ttl = 2);
+        $cache = new DefaultCache($ttl = 2);
         $key1 = 'test';
         $value1 = 'obama';
         $cache->set($key1, $value1);
@@ -24,7 +24,7 @@ class DefaultCacheTest extends TestCase
 
     public function testDoesNotHaveValue()
     {
-        $cache = new DefaultCache($maxsize = 4, $ttl = 2);
+        $cache = new DefaultCache($ttl = 2);
         $key = 'test';
 
         $this->assertFalse($cache->has($key));
@@ -32,7 +32,7 @@ class DefaultCacheTest extends TestCase
 
     public function testGetValue()
     {
-        $cache = new DefaultCache($maxsize = 4, $ttl = 2);
+        $cache = new DefaultCache($ttl = 2);
         $key1 = 'test';
         $value1 = 'obama';
         $cache->set($key1, $value1);

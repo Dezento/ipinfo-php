@@ -78,7 +78,7 @@ class IPinfo
             } else {
                 $maxsize = $settings['cache_maxsize'] ?? self::CACHE_MAXSIZE;
                 $ttl = $settings['cache_ttl'] ?? self::CACHE_TTL;
-                $this->cache = new DefaultCache($maxsize, $ttl);
+                $this->cache = new DefaultCache($ttl);
             }
         } else {
             $this->cache = null;
